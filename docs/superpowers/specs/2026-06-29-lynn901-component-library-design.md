@@ -225,7 +225,7 @@ apps/v4/public/r/styles/
 - push 即发布，与官方托管架构同构（官方 registry 也托管在站点静态目录）。
 - 与"个人库"定位匹配。
 
-**实现注意**：GitHub Pages 默认托管仓库根或 `/docs`，而 registry JSON 在 `apps/v4/public/r/`。需用一个轻量 GitHub Action 把 `apps/v4/public/r/` 发布为 Pages 站点（或配置 Pages 源）。具体配置在实现计划中覆盖。
+**实现注意**：GitHub Pages 默认托管仓库根或 `/docs`，而 registry JSON 在 `apps/v4/public/r/`。用一个轻量 GitHub Action（`.github/workflows/deploy-registry-pages.yml`）部署：`upload-pages-artifact` 会把 `path` 指向目录的**内容**作为站点根，故直接传 `apps/v4/public/r` 会丢失 `/r/` 段（URL 变成 `/ui/styles/...`）。为与官方 `/r/styles/` 同构，workflow 先把 `apps/v4/public/r` 复制到临时目录的 `r/` 子路径下再上传，使 registry 服务于 `https://lynn901.github.io/ui/r/styles/...`。
 
 ## 8. 同步冲突处理与 OVERRIDES.md
 

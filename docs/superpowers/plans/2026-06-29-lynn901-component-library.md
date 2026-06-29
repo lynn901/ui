@@ -666,16 +666,25 @@ jobs:
       - uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Upload public/r as Pages artifact
+      - name: Build Pages root (serve public/r at /r/)
+        # upload-pages-artifact treats `path`'s CONTENTS as the site root, so
+        # serving apps/v4/public/r directly would drop the /r/ segment from the
+        # URL (giving /styles/... instead of /r/styles/...). Mirror the official
+        # shadcn hosting layout by nesting r/ under a temp root, so the registry
+        # is served at https://lynn901.github.io/ui/r/styles/...
+        run: |
+          mkdir -p "${{ runner.temp }}/pages/r"
+          cp -r apps/v4/public/r/. "${{ runner.temp }}/pages/r/"
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: apps/v4/public/r
+          path: ${{ runner.temp }}/pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
 ```
 
-注：此 Action 把 `apps/v4/public/r` 整个目录作为 Pages 站点根。站点根 = `https://lynn901.github.io/ui/`，故 `public/r/styles/lynn901-nova/button.json` 对应 URL `https://lynn901.github.io/ui/r/styles/lynn901-nova/button.json`。
+注：`upload-pages-artifact` 把 `path` 指向目录的**内容**作为站点根。直接传 `apps/v4/public/r` 会丢失 `/r/` 段（URL 变 `/ui/styles/...`）。故 workflow 先把 `public/r` 复制到临时目录的 `r/` 子路径下再上传，使站点根 = `https://lynn901.github.io/ui/`，`public/r/styles/lynn901-nova/button.json` 对应 URL `https://lynn901.github.io/ui/r/styles/lynn901-nova/button.json`，与官方 `/r/styles/` 同构。
 
 - [ ] **Step 2: 提交 Action**
 

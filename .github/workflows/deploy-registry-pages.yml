@@ -26,10 +26,19 @@ jobs:
       - uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Upload public/r as Pages artifact
+      - name: Build Pages root (serve public/r at /r/)
+        # upload-pages-artifact treats `path`'s CONTENTS as the site root, so
+        # serving apps/v4/public/r directly would drop the /r/ segment from the
+        # URL (giving /styles/... instead of /r/styles/...). Mirror the official
+        # shadcn hosting layout by nesting r/ under a temp root, so the registry
+        # is served at https://lynn901.github.io/ui/r/styles/...
+        run: |
+          mkdir -p "${{ runner.temp }}/pages/r"
+          cp -r apps/v4/public/r/. "${{ runner.temp }}/pages/r/"
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: apps/v4/public/r
+          path: ${{ runner.temp }}/pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

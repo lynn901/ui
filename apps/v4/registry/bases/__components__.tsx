@@ -2980,4 +2980,24 @@ export const Components: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] }
     }),
   },
+  lynn901: {
+    button: React.lazy(async () => {
+      const mod = await import("@/registry/bases/lynn901/ui/button")
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "button"
+      return { default: mod.default || mod[exportName] }
+    }),
+    utils: React.lazy(async () => {
+      const mod = await import("@/registry/bases/lynn901/lib/utils")
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "utils"
+      return { default: mod.default || mod[exportName] }
+    }),
+  },
 }

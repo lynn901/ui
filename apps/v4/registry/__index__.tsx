@@ -28189,4 +28189,164 @@ export const Index: Record<string, Record<string, any>> = {
       meta: undefined,
     },
   },
+  "lynn901-vega": {
+    button: {
+      name: "button",
+      title: "undefined",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [
+        {
+          path: "styles/lynn901-vega/ui/button.tsx",
+          type: "registry:ui",
+          target: "",
+        },
+      ],
+      categories: undefined,
+      meta: {
+        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
+      },
+    },
+  },
+  "lynn901-nova": {
+    button: {
+      name: "button",
+      title: "undefined",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [
+        {
+          path: "styles/lynn901-nova/ui/button.tsx",
+          type: "registry:ui",
+          target: "",
+        },
+      ],
+      categories: undefined,
+      meta: {
+        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
+      },
+    },
+  },
+  "lynn901-maia": {
+    button: {
+      name: "button",
+      title: "undefined",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [
+        {
+          path: "styles/lynn901-maia/ui/button.tsx",
+          type: "registry:ui",
+          target: "",
+        },
+      ],
+      categories: undefined,
+      meta: {
+        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
+      },
+    },
+  },
+  "lynn901-lyra": {
+    button: {
+      name: "button",
+      title: "undefined",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [
+        {
+          path: "styles/lynn901-lyra/ui/button.tsx",
+          type: "registry:ui",
+          target: "",
+        },
+      ],
+      categories: undefined,
+      meta: {
+        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
+      },
+    },
+  },
+  "lynn901-mira": {
+    button: {
+      name: "button",
+      title: "undefined",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [
+        {
+          path: "styles/lynn901-mira/ui/button.tsx",
+          type: "registry:ui",
+          target: "",
+        },
+      ],
+      categories: undefined,
+      meta: {
+        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
+      },
+    },
+  },
+  "lynn901-luma": {
+    button: {
+      name: "button",
+      title: "undefined",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [
+        {
+          path: "styles/lynn901-luma/ui/button.tsx",
+          type: "registry:ui",
+          target: "",
+        },
+      ],
+      categories: undefined,
+      meta: {
+        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
+      },
+    },
+  },
+  "lynn901-sera": {
+    button: {
+      name: "button",
+      title: "undefined",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [
+        {
+          path: "styles/lynn901-sera/ui/button.tsx",
+          type: "registry:ui",
+          target: "",
+        },
+      ],
+      categories: undefined,
+      meta: {
+        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
+      },
+    },
+  },
+  "lynn901-rhea": {
+    button: {
+      name: "button",
+      title: "undefined",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [
+        {
+          path: "styles/lynn901-rhea/ui/button.tsx",
+          type: "registry:ui",
+          target: "",
+        },
+      ],
+      categories: undefined,
+      meta: {
+        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
+      },
+    },
+  },
 }

@@ -7300,4 +7300,40 @@ export const Index: Record<string, Record<string, any>> = {
       meta: undefined,
     },
   },
+  lynn901: {
+    button: {
+      name: "button",
+      title: "undefined",
+      description: "",
+      type: "registry:ui",
+      registryDependencies: undefined,
+      files: [
+        {
+          path: "registry/bases/lynn901/ui/button.tsx",
+          type: "registry:ui",
+          target: "",
+        },
+      ],
+      categories: undefined,
+      meta: {
+        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
+      },
+    },
+    utils: {
+      name: "utils",
+      title: "undefined",
+      description: "",
+      type: "registry:lib",
+      registryDependencies: undefined,
+      files: [
+        {
+          path: "registry/bases/lynn901/lib/utils.ts",
+          type: "registry:lib",
+          target: "",
+        },
+      ],
+      categories: undefined,
+      meta: undefined,
+    },
+  },
 }

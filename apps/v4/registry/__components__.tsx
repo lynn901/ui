@@ -12612,4 +12612,92 @@ export const Components: Record<string, Record<string, any>> = {
       return { default: mod.default || mod[exportName] }
     }),
   },
+  "lynn901-vega": {
+    button: React.lazy(async () => {
+      const mod = await import("@/styles/lynn901-vega/ui/button")
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "button"
+      return { default: mod.default || mod[exportName] }
+    }),
+  },
+  "lynn901-nova": {
+    button: React.lazy(async () => {
+      const mod = await import("@/styles/lynn901-nova/ui/button")
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "button"
+      return { default: mod.default || mod[exportName] }
+    }),
+  },
+  "lynn901-maia": {
+    button: React.lazy(async () => {
+      const mod = await import("@/styles/lynn901-maia/ui/button")
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "button"
+      return { default: mod.default || mod[exportName] }
+    }),
+  },
+  "lynn901-lyra": {
+    button: React.lazy(async () => {
+      const mod = await import("@/styles/lynn901-lyra/ui/button")
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "button"
+      return { default: mod.default || mod[exportName] }
+    }),
+  },
+  "lynn901-mira": {
+    button: React.lazy(async () => {
+      const mod = await import("@/styles/lynn901-mira/ui/button")
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "button"
+      return { default: mod.default || mod[exportName] }
+    }),
+  },
+  "lynn901-luma": {
+    button: React.lazy(async () => {
+      const mod = await import("@/styles/lynn901-luma/ui/button")
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "button"
+      return { default: mod.default || mod[exportName] }
+    }),
+  },
+  "lynn901-sera": {
+    button: React.lazy(async () => {
+      const mod = await import("@/styles/lynn901-sera/ui/button")
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "button"
+      return { default: mod.default || mod[exportName] }
+    }),
+  },
+  "lynn901-rhea": {
+    button: React.lazy(async () => {
+      const mod = await import("@/styles/lynn901-rhea/ui/button")
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || "button"
+      return { default: mod.default || mod[exportName] }
+    }),
+  },
 }

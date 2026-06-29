@@ -7315,9 +7315,7 @@ export const Index: Record<string, Record<string, any>> = {
         },
       ],
       categories: undefined,
-      meta: {
-        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
-      },
+      meta: undefined,
     },
     utils: {
       name: "utils",

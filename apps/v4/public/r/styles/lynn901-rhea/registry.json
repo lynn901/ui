@@ -60,11 +60,6 @@
           "type": "registry:ui"
         }
       ],
-      "meta": {
-        "links": {
-          "docs": "https://lynn901.github.io/ui/docs/components/button"
-        }
-      },
       "type": "registry:ui"
     },
     {

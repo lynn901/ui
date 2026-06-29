@@ -28204,9 +28204,7 @@ export const Index: Record<string, Record<string, any>> = {
         },
       ],
       categories: undefined,
-      meta: {
-        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
-      },
+      meta: undefined,
     },
   },
   "lynn901-nova": {
@@ -28224,9 +28222,7 @@ export const Index: Record<string, Record<string, any>> = {
         },
       ],
       categories: undefined,
-      meta: {
-        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
-      },
+      meta: undefined,
     },
   },
   "lynn901-maia": {
@@ -28244,9 +28240,7 @@ export const Index: Record<string, Record<string, any>> = {
         },
       ],
       categories: undefined,
-      meta: {
-        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
-      },
+      meta: undefined,
     },
   },
   "lynn901-lyra": {
@@ -28264,9 +28258,7 @@ export const Index: Record<string, Record<string, any>> = {
         },
       ],
       categories: undefined,
-      meta: {
-        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
-      },
+      meta: undefined,
     },
   },
   "lynn901-mira": {
@@ -28284,9 +28276,7 @@ export const Index: Record<string, Record<string, any>> = {
         },
       ],
       categories: undefined,
-      meta: {
-        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
-      },
+      meta: undefined,
     },
   },
   "lynn901-luma": {
@@ -28304,9 +28294,7 @@ export const Index: Record<string, Record<string, any>> = {
         },
       ],
       categories: undefined,
-      meta: {
-        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
-      },
+      meta: undefined,
     },
   },
   "lynn901-sera": {
@@ -28324,9 +28312,7 @@ export const Index: Record<string, Record<string, any>> = {
         },
       ],
       categories: undefined,
-      meta: {
-        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
-      },
+      meta: undefined,
     },
   },
   "lynn901-rhea": {
@@ -28344,9 +28330,7 @@ export const Index: Record<string, Record<string, any>> = {
         },
       ],
       categories: undefined,
-      meta: {
-        links: { docs: "https://lynn901.github.io/ui/docs/components/button" },
-      },
+      meta: undefined,
     },
   },
 }

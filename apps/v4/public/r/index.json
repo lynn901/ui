@@ -200,9 +200,6 @@
         "base": {
           "docs": "https://ui.shadcn.com/docs/components/base/button",
           "examples": "https://ui.shadcn.com/code/apps/v4/registry/bases/base/examples/button-example.tsx"
-        },
-        "lynn901": {
-          "docs": "https://lynn901.github.io/ui/docs/components/button"
         }
       }
     }

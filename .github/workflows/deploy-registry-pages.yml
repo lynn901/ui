@@ -1,0 +1,35 @@
+name: Deploy Registry to Pages
+
+on:
+  push:
+    branches: [main-custom]
+    paths:
+      - "apps/v4/public/r/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload public/r as Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/v4/public/r
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

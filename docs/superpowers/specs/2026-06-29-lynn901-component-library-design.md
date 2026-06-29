@@ -117,7 +117,7 @@ apps/v4/registry/bases/
 
 ### 5.1 BASES 数组注册（必然冲突点）
 
-在 `apps/v4/registry/bases/index.ts` 的 `BASES` 数组中**追加一个元素**：
+在 `apps/v4/registry/bases.ts` 的 `BASES` 数组中**追加一个元素**（注意：`BASES` 常量定义在 `registry/bases.ts`，不是 `registry/bases/index.ts`）：
 
 ```ts
 {
@@ -243,7 +243,7 @@ apps/v4/public/r/styles/
 
 | 官方文件 | 改动类型 | 改动内容 | 为什么不能用 B/C | 登记日期 |
 |---|---|---|---|---|
-| apps/v4/registry/bases/index.ts | 追加 | BASES 数组追加 lynn901 条目 | 新 base 必须注册进中心化数组, wrapper/fork 无法替代 | 2026-06-29 |
+| apps/v4/registry/bases.ts | 追加 | BASES 数组追加 lynn901 条目 | 新 base 必须注册进中心化数组, wrapper/fork 无法替代 | 2026-06-29 |
 | ... | ... | ... | ... | ... |
 ```
 

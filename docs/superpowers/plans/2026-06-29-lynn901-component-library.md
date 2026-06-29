@@ -457,29 +457,32 @@ export const registry = {
 文件 `apps/v4/registry/bases/lynn901/ui/button.tsx`：
 
 ```tsx
-import { Slot } from "@base-ui/react/slot"
+import { Button as ButtonPrimitive } from "@base-ui/react/button"
 import { cva, type VariantProps } from "class-variance-authority"
-import * as React from "react"
 
 import { cn } from "@/registry/bases/lynn901/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  "cn-button group/button inline-flex shrink-0 items-center justify-center whitespace-nowrap transition-all outline-none select-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
-        destructive: "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40",
-        outline: "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
-        secondary: "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
-        link: "text-primary underline-offset-4 hover:underline",
+        default: "cn-button-variant-default",
+        outline: "cn-button-variant-outline",
+        secondary: "cn-button-variant-secondary",
+        ghost: "cn-button-variant-ghost",
+        destructive: "cn-button-variant-destructive",
+        link: "cn-button-variant-link",
       },
       size: {
-        default: "h-9 px-4 py-2 has-[>svg]:px-3",
-        sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
-        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
-        icon: "size-9",
+        default: "cn-button-size-default",
+        xs: "cn-button-size-xs",
+        sm: "cn-button-size-sm",
+        lg: "cn-button-size-lg",
+        icon: "cn-button-size-icon",
+        "icon-xs": "cn-button-size-icon-xs",
+        "icon-sm": "cn-button-size-icon-sm",
+        "icon-lg": "cn-button-size-icon-lg",
       },
     },
     defaultVariants: {
@@ -491,17 +494,12 @@ const buttonVariants = cva(
 
 function Button({
   className,
-  variant,
-  size,
-  asChild = false,
+  variant = "default",
+  size = "default",
   ...props
-}: React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean
-  }) {
-  const Comp = asChild ? Slot : "button"
+}: ButtonPrimitive.Props & VariantProps<typeof buttonVariants>) {
   return (
-    <Comp
+    <ButtonPrimitive
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
@@ -512,7 +510,7 @@ function Button({
 export { Button, buttonVariants }
 ```
 
-注：import 路径用 `@/registry/bases/lynn901/lib/utils`（自有命名空间内的 utils）。`@base-ui/react/slot` 是 Base UI 的 Slot 实现，与官方 base button 一致。若官方 base 的 button 源码与此略有差异，以 `apps/v4/registry/bases/base/ui/button.tsx` 实际内容为准 1:1 复制后改 import 路径。
+注：import 路径用 `@/registry/bases/lynn901/lib/utils`（自有命名空间内的 utils）。这是官方 base button 的当前实现：基于 `@base-ui/react/button` 的 `ButtonPrimitive`，变体通过语义 token（`cn-button`、`cn-button-variant-*`、`cn-button-size-*`）表达，样式定义在各 style 的 CSS 中。已按 `apps/v4/registry/bases/base/ui/button.tsx` 实际内容 1:1 复制，仅 `cn` 的 import 路径改为 lynn901 命名空间。
 
 - [ ] **Step 2: 创建 ui/_registry.ts（含 button 条目）**
 

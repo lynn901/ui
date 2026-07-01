@@ -37,19 +37,20 @@ export default function IndexPage() {
       {/* Hero */}
       <section className="container-wrapper flex-1">
         <div className="container flex flex-col items-center py-16 text-center md:py-24">
-          <p className="font-sans text-xs uppercase tracking-[0.25em] text-primary">
+          <p className="font-sans text-xs tracking-[0.25em] text-primary uppercase">
             个人组件库 · Base UI
           </p>
-          <h1 className="mt-3 max-w-3xl font-heading text-4xl font-medium leading-tight md:text-5xl">
+          <h1 className="mt-3 max-w-3xl font-heading text-4xl leading-tight font-medium md:text-5xl">
             安静地构建，
             <br />
-            基于 <em className="italic text-primary">Base UI</em>。
+            基于 <em className="text-primary italic">Base UI</em>。
           </h1>
           <p className="mt-5 max-w-xl font-serif-cn text-base text-muted-foreground">
             {description}
           </p>
           <code className="mt-6 rounded bg-secondary px-3 py-2 font-mono text-xs text-primary">
-            $ npx shadcn add https://lynn901.github.io/ui/r/styles/lynn901-nova/button.json
+            $ npx shadcn add
+            https://lynn901.github.io/ui/r/styles/lynn901-nova/button.json
           </code>
           <div className="mt-6 flex gap-3">
             <Button asChild className="rounded-lg">
@@ -80,7 +81,7 @@ export default function IndexPage() {
             {/* Button 卡 */}
             <div className="rounded-lg border border-border bg-card p-6">
               <div className="font-heading text-lg">
-                按钮 <em className="italic text-primary">Button</em>
+                按钮 <em className="text-primary italic">Button</em>
               </div>
               <p className="mt-1 font-serif-cn text-sm text-muted-foreground">
                 触发操作的基础元素，支持变体与尺寸。
@@ -112,7 +113,7 @@ export default function IndexPage() {
       {/* 页脚条 */}
       <section className="container-wrapper border-t border-border">
         <div className="container py-6">
-          <p className="font-serif-cn text-center text-sm text-muted-foreground">
+          <p className="text-center font-serif-cn text-sm text-muted-foreground">
             底层 Base UI · 8 styles · shadcn registry 兼容
           </p>
         </div>

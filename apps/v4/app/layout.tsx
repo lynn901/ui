@@ -21,7 +21,14 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
   description: siteConfig.description,
-  keywords: ["Next.js", "React", "Tailwind CSS", "Components", "lynn901", "Base UI"],
+  keywords: [
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Components",
+    "lynn901",
+    "Base UI",
+  ],
   authors: [
     {
       name: "lynn901",

@@ -12,10 +12,10 @@ export default function AboutPage() {
   return (
     <div className="container-wrapper flex-1">
       <div className="container max-w-2xl py-16">
-        <p className="font-sans text-xs uppercase tracking-[0.25em] text-primary">
+        <p className="font-sans text-xs tracking-[0.25em] text-primary uppercase">
           关于
         </p>
-        <h1 className="mt-3 font-heading text-4xl font-medium leading-tight">
+        <h1 className="mt-3 font-heading text-4xl leading-tight font-medium">
           lynn901<span className="text-primary">/ui</span>
         </h1>
         <div className="mt-6 space-y-4 font-serif-cn text-base leading-relaxed text-muted-foreground">

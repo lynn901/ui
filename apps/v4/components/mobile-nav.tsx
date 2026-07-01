@@ -9,12 +9,12 @@ import { showMcpDocs } from "@/lib/flags"
 import { getCurrentBase, getPagesFromFolder } from "@/lib/page-tree"
 import { type source } from "@/lib/source"
 import { cn } from "@/lib/utils"
-import { Button } from "@/styles/lynn901-nova/ui/button"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/registry/new-york-v4/ui/popover"
+import { Button } from "@/styles/lynn901-nova/ui/button"
 
 const TOP_LEVEL_SECTIONS = [
   {

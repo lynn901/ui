@@ -8,12 +8,12 @@ export function SiteFooter() {
           <div className="w-full px-1 text-center text-xs leading-loose text-muted-foreground sm:text-sm">
             Built by{" "}
             <a
-              href={siteConfig.links.twitter}
+              href={siteConfig.links.github}
               target="_blank"
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              shadcn
+              lynn901
             </a>{" "}
             at{" "}
             <a

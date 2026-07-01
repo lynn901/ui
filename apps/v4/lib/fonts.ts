@@ -1,7 +1,7 @@
 import {
   Fraunces as FontFraunces,
-  Geist_Mono as FontMono,
   Inter as FontInter,
+  Geist_Mono as FontMono,
   Noto_Sans_Arabic as FontNotoSansArabic,
   Noto_Sans_Hebrew as FontNotoSansHebrew,
   Noto_Serif_SC as FontNotoSerifSC,

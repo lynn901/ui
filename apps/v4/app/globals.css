@@ -20,9 +20,10 @@
 @theme inline {
   --breakpoint-3xl: 1600px;
   --breakpoint-4xl: 2000px;
-  --font-sans: var(--font-sans);
-  --font-heading: var(--font-heading);
-  --font-mono: var(--font-mono);
+  --font-sans: var(--font-sans), "Noto Serif SC", "Microsoft YaHei", sans-serif;
+  --font-heading: var(--font-heading), "Noto Serif SC", serif;
+  --font-mono: var(--font-mono), monospace;
+  --font-serif-cn: var(--font-serif-cn), "Microsoft YaHei", serif;
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);

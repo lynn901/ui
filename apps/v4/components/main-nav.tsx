@@ -21,6 +21,8 @@ export function MainNav({
       {items.map((item) => (
         <Button
           key={item.href}
+          nativeButton={false}
+          role="link"
           variant="ghost"
           size="sm"
           className="px-2.5"

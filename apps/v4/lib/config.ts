@@ -41,6 +41,6 @@ export const siteConfig = {
 }
 
 export const META_THEME_COLORS = {
-  light: "#ffffff",
-  dark: "#09090b",
+  light: "#faf7f2",
+  dark: "#1c1814",
 }

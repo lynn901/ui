@@ -1,0 +1,47 @@
+# 依赖与构建产物 —— 容器内重新安装/构建，避免宿主机产物污染镜像
+**/node_modules
+**/.pnp
+**/.pnp.js
+
+# Next.js 输出
+.next/
+out/
+**/build
+
+# Turbo / 缓存
+.turbo
+**/.turbo
+**/.eslintcache
+**/tsconfig.tsbuildinfo
+**/.source
+.contentlayer
+
+# 测试与临时
+coverage
+**/__screenshots__
+.codex-artifacts
+.tmp*
+**/temp/**
+**/fixtures/**
+.playwright-mcp
+.playwright-cli
+shadcn-workspace
+
+# 本地环境变量 —— 运行时 env 通过 compose 注入，构建期用 build-arg
+**/.env.local
+**/.env.*.local
+
+# 版本控制与 IDE
+.git
+.github
+.vscode
+.idea
+.fleet
+.cursor
+.cursor-plugin
+.DS_Store
+
+# 文档与计划（无需进镜像）
+CONTEXT.md
+docs/adr
+.notes

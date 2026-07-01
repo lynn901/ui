@@ -3,6 +3,8 @@ import { createMDX } from "fumadocs-mdx/next"
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // 产出自包含的 .next/standalone/server.js，容器运行镜像无需 node_modules。
+  output: "standalone",
   devIndicators: false,
   typescript: {
     ignoreBuildErrors: true,

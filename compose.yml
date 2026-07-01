@@ -1,0 +1,41 @@
+# Podman Compose 编排 — lynn901 v4 文档站
+#
+# 用法:
+#   podman compose up -d --build      # 首次构建并后台启动
+#   podman compose logs -f            # 跟踪日志
+#   podman compose down               # 停止并移除容器
+#   podman compose up -d --build --build-arg NEXT_PUBLIC_APP_URL=https://你的域名
+#                                     # 换域名时重建
+#
+# Podman Desktop: 启动后在 "Containers/Compositions" 里可直接管理本文件。
+
+services:
+  v4:
+    container_name: lynn901-v4
+    build:
+      context: .
+      dockerfile: Containerfile
+      args:
+        # NEXT_PUBLIC_* 在构建期被内联进客户端 bundle, 运行时不可改。
+        # 生产部署改为真实域名后重建镜像。
+        NEXT_PUBLIC_APP_URL: "http://localhost:4000"
+        NEXT_PUBLIC_V0_URL: "https://v0.dev"
+    # 不设 image: —— podman-compose 见 image 会先尝试 pull, WSL2 下 Docker Hub
+    # 超时浪费 30s。让 build 产物自动命名即可。
+    ports:
+      # 宿主机:容器。本机访问 http://localhost:4000
+      - "4000:4000"
+    environment:
+      - NODE_ENV=production
+      # 运行时 env (服务端可见)。当前 v4 无服务端密钥需求;
+      # 将来若加 API key 在此注入, 优先用 Podman Desktop 的 secrets。
+      - HOSTNAME=0.0.0.0
+      - PORT=4000
+    restart: unless-stopped
+    # 无持久卷: v4 是纯静态内容站, 运行时不向磁盘写需保留的数据。
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"fetch('http://127.0.0.1:4000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s

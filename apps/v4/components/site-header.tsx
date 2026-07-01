@@ -1,8 +1,3 @@
-import { Suspense } from "react"
-import Link from "next/link"
-import { PlusSignIcon } from "@hugeicons/core-free-icons"
-import { HugeiconsIcon } from "@hugeicons/react"
-
 import { getColors } from "@/lib/colors"
 import { siteConfig } from "@/lib/config"
 import { source } from "@/lib/source"
@@ -12,9 +7,6 @@ import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
 import { ModeSwitcher } from "@/components/mode-switcher"
 import { Separator } from "@/registry/new-york-v4/ui/separator"
-import { Button } from "@/styles/radix-nova/ui/button"
-import { ProjectForm } from "@/app/(app)/create/components/project-form"
-import { V0Button } from "@/app/(app)/create/components/v0-button"
 
 export function SiteHeader() {
   const colors = getColors()
@@ -45,30 +37,6 @@ export function SiteHeader() {
             <GitHubLink />
             <Separator orientation="vertical" />
             <ModeSwitcher />
-            <div className="hidden items-center gap-2 group-has-data-[slot=designer]/layout:md:flex">
-              <Separator orientation="vertical" />
-              <Suspense fallback={null}>
-                <V0Button />
-              </Suspense>
-              <Suspense fallback={null}>
-                <ProjectForm />
-              </Suspense>
-            </div>
-            <div className="hidden items-center gap-2 group-has-data-[slot=designer]/layout:flex group-has-data-[slot=designer]/layout:md:hidden">
-              <Separator orientation="vertical" />
-              <Suspense fallback={null}>
-                <V0Button />
-              </Suspense>
-            </div>
-            <div className="flex items-center gap-2 group-has-data-[slot=designer]/layout:hidden">
-              <Separator orientation="vertical" />
-              <Button asChild size="sm" className="h-[31px] rounded-lg">
-                <Link href="/create">
-                  <HugeiconsIcon icon={PlusSignIcon} />
-                  New
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
       </div>

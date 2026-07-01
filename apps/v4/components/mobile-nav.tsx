@@ -9,7 +9,7 @@ import { showMcpDocs } from "@/lib/flags"
 import { getCurrentBase, getPagesFromFolder } from "@/lib/page-tree"
 import { type source } from "@/lib/source"
 import { cn } from "@/lib/utils"
-import { Button } from "@/registry/new-york-v4/ui/button"
+import { Button } from "@/styles/lynn901-nova/ui/button"
 import {
   Popover,
   PopoverContent,
@@ -17,7 +17,6 @@ import {
 } from "@/registry/new-york-v4/ui/popover"
 
 const TOP_LEVEL_SECTIONS = [
-  { name: "Introduction", href: "/docs" },
   {
     name: "Components",
     href: "/docs/components",
@@ -31,28 +30,8 @@ const TOP_LEVEL_SECTIONS = [
     href: "/docs/theming",
   },
   {
-    name: "CLI",
-    href: "/docs/cli",
-  },
-  {
-    name: "RTL",
-    href: "/docs/rtl",
-  },
-  {
-    name: "Skills",
-    href: "/docs/skills",
-  },
-  {
-    name: "MCP Server",
-    href: "/docs/mcp",
-  },
-  {
     name: "Registry",
     href: "/docs/registry",
-  },
-  {
-    name: "Forms",
-    href: "/docs/forms",
   },
   {
     name: "Changelog",

@@ -21,17 +21,17 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
   description: siteConfig.description,
-  keywords: ["Next.js", "React", "Tailwind CSS", "Components", "shadcn"],
+  keywords: ["Next.js", "React", "Tailwind CSS", "Components", "lynn901", "Base UI"],
   authors: [
     {
-      name: "shadcn",
-      url: "https://shadcn.com",
+      name: "lynn901",
+      url: "https://lynn901.github.io/ui",
     },
   ],
-  creator: "shadcn",
+  creator: "lynn901",
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "zh_CN",
     url: process.env.NEXT_PUBLIC_APP_URL!,
     title: siteConfig.name,
     description: siteConfig.description,
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${process.env.NEXT_PUBLIC_APP_URL}/opengraph-image.png`],
-    creator: "@shadcn",
+    creator: "@lynn901",
   },
   icons: {
     icon: "/favicon.ico",
@@ -71,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={fontVariables}>
+    <html lang="zh-CN" suppressHydrationWarning className={fontVariables}>
       <head>
         <script
           dangerouslySetInnerHTML={{

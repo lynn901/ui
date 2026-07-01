@@ -1,41 +1,24 @@
 export const siteConfig = {
-  name: "shadcn/ui",
-  url: "https://ui.shadcn.com",
-  ogImage: "https://ui.shadcn.com/og.jpg",
+  name: "lynn901/ui",
+  url: "https://lynn901.github.io/ui",
+  ogImage: "https://lynn901.github.io/ui/og.jpg",
   description:
-    "A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own. Open Source. Open Code.",
+    "lynn901 的个人组件库——基于 Base UI，八种风格，同一根基。一行命令安装任意组件。",
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn-ui/ui",
+    github: "https://github.com/lynn901/ui",
   },
   navItems: [
     {
-      href: "/",
-      label: "Home",
-    },
-    {
-      href: "/docs/installation",
-      label: "Docs",
-    },
-    {
       href: "/docs/components",
-      label: "Components",
+      label: "组件",
     },
     {
-      href: "/blocks",
-      label: "Blocks",
+      href: "/docs",
+      label: "文档",
     },
     {
-      href: "/charts/area",
-      label: "Charts",
-    },
-    {
-      href: "/docs/directory",
-      label: "Directory",
-    },
-    {
-      href: "/create",
-      label: "Create",
+      href: "/about",
+      label: "关于",
     },
   ],
 }

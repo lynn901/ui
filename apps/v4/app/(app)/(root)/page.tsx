@@ -2,7 +2,7 @@ import { type Metadata } from "next"
 import Link from "next/link"
 import { IconArrowRight } from "@tabler/icons-react"
 
-import { Button } from "@/styles/lynn901-nova/ui/button"
+import { Button } from "@/registry/new-york-v4/ui/button"
 
 const title = "安静地构建，基于 Base UI。"
 const description =
